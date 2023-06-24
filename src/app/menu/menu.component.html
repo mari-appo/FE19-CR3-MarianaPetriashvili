@@ -1,0 +1,30 @@
+<!doctype html>
+
+<h2 id="specialties">Our Specialties</h2>
+<div class="container">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+
+        <div *ngFor="let product of products; index as i" [ngClass]="{'unavailable': !product.availability}">
+            <div class="card" style="width: 18rem;">
+                <img src="{{product.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <hr>
+                    <p class="card-text">€{{product.price}}</p>
+                    <hr>
+                    <p class="card-text" *ngIf="product.description">{{product.description}}</p>
+                    <ng-container *ngIf="product.availability; else notAvailable">
+                        <a routerLink="/product/{{ i }}" class="btn btn-primary">Details</a>
+                        <a (click)="addToCart(product)" class="btn btn-secondary">Order</a>
+                    </ng-container>
+                </div>
+                <ng-template #notAvailable>
+                    <div class="unavailable-bg">
+                        <p>Not available</p>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+
+    </div>
+</div>

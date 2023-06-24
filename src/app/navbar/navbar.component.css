@@ -1,0 +1,25 @@
+.container-fluid {
+    background-color: #F79D6E;
+    padding: 10px;
+}
+
+.nav-link {
+    color: aliceblue;
+    border: #c85415;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    background-color: #c85415;
+    border-radius: 20px;
+}
+
+.nav-item {
+    display: flex;
+}
+
+.btn-warning {
+    background-color: #c85415;
+}

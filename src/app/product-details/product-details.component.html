@@ -1,0 +1,16 @@
+<!doctype html>
+
+<div class="container">
+    <div class="center">
+        <h2 id="details">More Details!!</h2>
+        <div *ngIf="product">
+            <img src="{{product.image}}" alt="" width="500px">
+            <p class="headline_details">{{product.name}}</p>
+            <p>Price: € {{product.price}}</p>
+            <p>{{product.description}}</p>
+            <p>{{product.details}}</p>
+            <!--<button (click)="addToCart()" class="btn btn-primary">Add to cart</button>-->
+        </div>
+    </div>
+    <button (click)="addToCart()" class="btn btn-primary">Add to card</button>
+</div>

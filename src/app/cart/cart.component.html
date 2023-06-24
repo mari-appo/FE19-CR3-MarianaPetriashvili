@@ -1,0 +1,17 @@
+<!doctype html>
+<div class="container">
+    <h2 id="your_cart">Your Cart</h2>
+
+
+    <div *ngFor="let item of cart">
+        <p>{{item.name}}</p>
+        <p>€ {{item.price}}</p>
+        <p>{{item.description}}</p>
+        <hr>
+    </div>
+    <p> price total: {{total}} </p>
+    <p> price including service fee: {{fee}} </p>
+
+    <div *ngIf="fee > 40">price including discount: {{discount.toFixed()}}</div>
+
+</div>

@@ -1,0 +1,22 @@
+#details {
+    font-size: 50px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn-primary {
+    margin-left: 0px;
+    background-color: #F79D6E;
+}
+
+.headline_details {
+    font-size: 30px;
+    margin-top: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
